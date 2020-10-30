@@ -1,0 +1,34 @@
+#container {
+    text-align: center;
+    margin-top: 150px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-bottom: 30px;
+    background-color: blueviolet;
+    border: 2px solid black;
+    border-radius: 15px 50px 30px;
+}
+
+input {
+    padding-left: 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    font-size: x-large;
+    border: 2px solid black;
+    list-style-position: inside;
+    margin: 5px 5px 5px 5px;
+    background-color: chartreuse;
+    border-radius: 25px;
+}
+button {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: rgb(70, 84, 165);
+}
