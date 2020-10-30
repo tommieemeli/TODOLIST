@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <script>
-    
+ 
     var munLista = document.getElementsByTagName("li");
     var close = document.getElementsByClassName("close");
     var hide = document.getElementsByClassName("hide");
     var x;
     var i;
-
+ 
     function lisääTekeminen() {
       var li = document.createElement("li");
       var mitäTehdä = document.getElementById("inputti").value;
       console.log(mitäTehdä);
       var x = document.createTextNode(mitäTehdä);
-      var kenttä = document.forms.formi.inputti;
+      var kenttä = document.getElementById("inputti")
       li.appendChild(x);
-     
+ 
       if(mitäTehdä == "") { 
         alert("Etkö halua tehdä mitään ?");  
         kenttä.focus();
@@ -24,26 +24,26 @@
         document.getElementById("lista").appendChild(li);
       }
       document.getElementById("inputti").value = "";
-
+ 
       var nappi = document.createElement("BUTTON");
       var teksti = document.createTextNode("Poista");
       nappi.className = 'close';      
       nappi.appendChild(teksti);
       li.appendChild(nappi);
-      
-      for(i = 0; i < close.length; i++) {
+ 
+      for(i = 1; i < close.length; i++) {
         close[i].onclick = function() {
           var div = this.parentElement;
           div.style.display = "none";
         }
       } 
-
+ 
       var piilota = document.createElement("BUTTON")
       var txti = document.createTextNode("Tehty");
       piilota.className = 'hide';
       piilota.appendChild(txti);
       li.appendChild(piilota);
-
+ 
       for(y = 0; y < hide.length; y++) {
         hide[y].onclick = function() {
           var haid = this.parentElement;
@@ -62,16 +62,13 @@
     <div id="container" class="header">
       <div id="input">
         <h1>To Do List</h1>
-        <form name="formi" action="#" onsubmit="lisääTekeminen()">
           <input type="text" id="inputti" placeholder="Mitä tänään tehtäisiin...">
-          <button class="lisääToDo">Lisää</button> 
-        </form>
+          <button class="lisääToDo" onclick="lisääTekeminen()">Lisää</button> 
       </div>
-
+ 
       <ul id="lista">
-
       </ul> 
-
+ 
     </div>
   </body>
-</html>
+</html
