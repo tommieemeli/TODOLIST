@@ -11,6 +11,7 @@
     function lisääTekeminen() {
       var li = document.createElement("li");
       var mitäTehdä = document.getElementById("inputti").value;
+      console.log(mitäTehdä);
       var x = document.createTextNode(mitäTehdä);
       var kenttä = document.forms.formi.inputti;
       li.appendChild(x);
@@ -61,7 +62,7 @@
     <div id="container" class="header">
       <div id="input">
         <h1>To Do List</h1>
-        <form name="formi" action="#" onsubmit="lisääTekeminen()" method="">
+        <form name="formi" action="#" onsubmit="lisääTekeminen()">
           <input type="text" id="inputti" placeholder="Mitä tänään tehtäisiin...">
           <button class="lisääToDo">Lisää</button> 
         </form>
