@@ -31,7 +31,7 @@
       nappi.appendChild(teksti);
       li.appendChild(nappi);
  
-      for(i = 1; i < close.length; i++) {
+      for(i = 0; i < close.length; i++) {
         close[i].onclick = function() {
           var div = this.parentElement;
           div.style.display = "none";
@@ -49,7 +49,6 @@
           var haid = this.parentElement;
           haid.style.textDecoration = "line-through";
           haid.style.backgroundColor = "grey";
-          li.removeChild(hide);
         }
       }
     }
